@@ -13,7 +13,8 @@ const createWindow = () => {
     height: 768,
     webPreferences: {
       devTools: true,
-      nodeIntegration: true
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js')
     }
   });
 
