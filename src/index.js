@@ -29,7 +29,7 @@ function getUserName () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  ipcMain.handle('userNameQuery', getUserName)
+  ipcMain.handle('usernameQuery', getUserName)
   createWindow()
 })
 
