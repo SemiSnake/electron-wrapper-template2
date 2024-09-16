@@ -25,7 +25,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 };
 function getComputerName () {
-  return computerName
+  return JSON.stringify(computerName)
 }
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
