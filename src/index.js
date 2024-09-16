@@ -24,12 +24,14 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 };
-
+function getComputerName () {
+  return computerName
+}
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  ipcMain.handle('ping', () => computerName)
+  ipcMain.handle('ping', getComputerName)
   createWindow()
 })
 
